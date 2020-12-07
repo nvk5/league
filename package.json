@@ -2,7 +2,6 @@
   "name": "league",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://nvk5.github.io/React-LeagueOfLegends",
   "dependencies": {
     "@glidejs/glide": "^3.4.1",
     "@testing-library/jest-dom": "^4.2.4",
