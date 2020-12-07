@@ -1,0 +1,31 @@
+.champion-role {
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.champion-role__block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px 20px;
+}
+
+.champion-role-icon-wrap {
+    width: 50px;
+    height: 50px;
+}
+
+.champion-role-icon-wrap svg {
+    width: 100%;
+    fill: rgb(208, 168, 92);
+}
+
+.champion-role__details {
+    display: flex;
+}
+
+.champion-role__title {
+    color: rgb(208, 168, 92);
+}
+

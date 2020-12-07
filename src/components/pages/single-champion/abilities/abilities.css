@@ -1,0 +1,60 @@
+.abilities {
+    color: #fff;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 0 15px;
+    padding-bottom: 240px;
+}
+
+.abilities__block--details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.abilities__track {
+    align-self: stretch;
+    margin-bottom: 30px;
+}
+
+.abilities__block--video {
+    width: 80%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.abilities__details {
+    letter-spacing: 0.05em;
+    max-width: 450px;
+}
+
+.abilities__headline {
+    font-family: 'Beaufort-Bold', serif;
+    font-size: 3.75rem;
+    font-weight: 800;
+    text-transform: uppercase; 
+    font-style: italic;
+    margin-bottom: 30px;
+}
+
+.ability-failure {
+    padding-top: 56.25%;
+}
+
+@media (max-width: 1199.98px) {
+    .abilities {
+        grid-gap: 20px;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .abilities {
+        grid-template-columns: 100%;
+    }
+    .abilities__block--video {
+        grid-row-start: 1;
+        justify-self: center;
+    }
+}

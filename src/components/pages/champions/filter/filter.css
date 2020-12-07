@@ -1,0 +1,77 @@
+.react-select-container:hover .react-select__indicator-separator {
+    transform: scale(1);
+}
+
+.react-select-container:hover .react-select__dropdown-indicator {
+    transform: translate(-8px, -50%);
+}
+
+.tag-filter {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    height: 100%;
+}
+
+.tag-filter__button {
+    padding: 0 10px;
+    text-transform: uppercase;
+    color: rgb(193, 193, 193);
+    height: 100%;
+    position: relative;
+    transition: color .3s ease;
+}
+
+
+.tag-filter__button::after {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 5px;
+    background: rgb(194, 144, 45);
+    bottom: -1px;
+    left: 50%;
+    transform: translateX(-50%) scaleX(0);
+    transition: transform .3s ease;
+}
+
+.tag-filter__button:hover,
+.tag-filter__button:focus {
+    color: #000;
+}
+
+.tag-filter__button:hover::after,
+.tag-filter__button:focus::after {
+    transform: translateX(-50%) scaleX(0.3);
+}
+
+.tag-filter__button.active {
+    color: #000;
+}
+
+.tag-filter__button.active::after {
+    transform: translateX(-50%) scaleX(1);
+}
+
+
+@media (max-width: 380px) {
+    .tag-filter {
+        border: 2px solid rgb(193, 193, 193);
+        left: -2px;
+        width: 101.3%;
+    }
+}
+
+.react-select-container.tags {
+    display: none;
+}
+
+@media (max-width: 1199.98px) {
+    .react-select-container.tags {
+        display: block;
+    }
+    .tag-filter {
+        display: none;
+    }
+}

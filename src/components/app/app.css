@@ -1,0 +1,66 @@
+html {
+    box-sizing: border-box;
+    font-size: 100%;
+}
+
+@media (max-width: 767.98px) {
+    html {
+        font-size: 85%;
+    }
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+    margin: 0;
+}
+
+body {
+    font-family: 'Spiegel-Regular';
+    line-height: 1.5;
+    background-color: #fff;
+    position: relative;
+    overflow-x: hidden;
+}
+
+a, button, input {
+    cursor: pointer
+}
+
+a {
+    text-decoration: none;
+}
+
+button, input[type="text"] {
+    text-transform: uppercase;
+    outline: none;
+    border: none;
+}
+
+button {
+    background: none;
+    padding: 0;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+h1,h2,h3,h4 {
+    margin: 0;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+}

@@ -1,0 +1,191 @@
+.track {
+    display: flex;
+    padding: 25px 0;
+    justify-content: center;
+    align-self: stretch;
+    position: relative;
+}
+
+.track::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    display: block;
+    background: rgb(57, 64, 72);
+    height: 1px;
+    top: 100%;
+}
+
+.track-wrap {
+    display: flex;
+    margin-left: -14px;
+    position: relative;
+}
+
+.track__btn {
+    margin: 0 7px;
+    position: relative;
+    width: 78px;
+    height: 78px;
+}
+
+
+
+
+.track__btn:hover .track__btn-label,
+.track__btn:focus .track__btn-label {
+    background: rgb(208, 168, 92);
+} 
+
+.track__btn:hover .img,
+.track__btn:focus .img {
+    transform: translateY(-5px);
+}
+
+
+
+.track__btn .img {
+    transition: all .3s linear;
+    padding: 7px;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+
+.track__btn-label {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background:  rgb(57, 64, 72);
+    top: calc(100% + 21px);
+    z-index: 2;
+    transition: background .3s ease-in;
+}
+
+
+
+.track__btn-current {
+    position: absolute;
+    background: rgb(208, 168, 92);
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    box-shadow: 0 0 0 3px black, 0 0 0 5px rgb(208, 168, 92);
+    top: calc(100% + 21px);
+    transition: transform .3s linear;
+    z-index: 3;
+    /* transform: translateX(41px); */
+} 
+
+ .track__btn-current span {
+    position: absolute;
+    height: 20px;
+    width: 1px;
+    background: rgb(208, 168, 92);
+    transform-origin: center bottom;
+    top: -23px;
+    left: 4px;
+    transform: scale(0);
+    transition: transform .3s linear;
+}
+
+.track__btn-current span.selected {
+    transform: scale(1)
+}
+
+
+.track__btn.active .img {
+    outline: 1px solid rgb(208, 168, 92);
+    transform: translateY(-15px);
+} 
+
+
+
+.track__btn:hover .track__btn-img-fake svg,
+.track__btn:focus .track__btn-img-fake svg {
+    fill: rgb(208, 168, 92);
+}
+
+.track__btn:hover .track__btn-desc-fake,
+.track__btn:focus .track__btn-desc-fake {
+    color: rgb(208, 168, 92);
+}
+
+.track__btn:hover .track__btn-img-fake,
+.track__btn:focus .track__btn-img-fake {
+    transform: translateY(-10px);
+}
+
+.track__btn.active .track__btn-img-fake svg {
+    /* transition: fill .3s ease; */
+    fill: rgb(208, 168, 92);
+}
+
+.track__btn.active .track__btn-img-fake {
+    transform: translateY(-20px) scale(1.2);
+}
+
+.track__btn.active .track__btn-border-fake {
+    opacity: 1;
+}
+
+
+
+.track__btn-img-fake {
+    transition: transform .3s ease-in;
+    width: 30px;
+    height: 30px;
+    position: relative;
+}
+
+.track__btn-border-fake {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform: translateY(-32px);
+    opacity: 0;
+    transition: opacity .3s ease;
+}
+
+.track__btn-img-fake svg {
+    width: 100%;
+    height: 100%;
+    transition: fill .3s ease-in;
+    /* fill: rgb(186, 194, 204); */
+}
+
+.track__btn-desc-fake {
+    margin: 10px 0;
+    font-size: 0.75rem;
+    transition: color .3s ease;
+}
+
+.track__btn-desc-fake.active {
+    color: rgb(208, 168, 92);
+}
+
+@media (max-width: 1280px) {
+    .track__btn-current,
+    .track__btn-label,
+    .track__btn-border-fake,
+    .track__btn-img-fake,
+    .track::after {
+        display: none;
+    }
+    .track__btn {
+        justify-content: center;
+        margin: 0;
+    }
+    .track {
+        justify-content: stretch;
+        padding: 0;
+    }
+    .track-wrap {
+        width: 100%;
+        margin-left: 0;
+        justify-content: space-between;
+    }
+}
+

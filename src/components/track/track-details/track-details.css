@@ -1,0 +1,35 @@
+@keyframes abilitiesShow {
+    0% {
+        opacity: 0;
+    }
+
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.track-details {
+    animation: abilitiesShow 1s ease ;
+}
+
+.track-details__name {
+    margin-top: 6px;
+    font-size: 1.125rem;
+    line-height: 1;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.track-details__desc {
+    margin-top: 6px;
+    font-size: 0.875rem;
+    line-height: 1.4;
+}
+
+.track-details__key {
+    font-size: 0.625rem;
+    line-height: 1;
+    letter-spacing: 0.15em;
+    color: rgb(126, 126, 126);
+}

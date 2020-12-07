@@ -1,0 +1,34 @@
+.headline-secondary {
+    text-transform: uppercase;
+    font-style: italic;
+    display: inline-flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.headline-secondary__desc {
+    font-size: 0.875rem;
+    max-width: 522px;
+    letter-spacing: 0.08em;
+    margin: 12px auto 0px;
+    text-align: center;
+}
+
+.headline-secondary__before {
+    font-size: 1.5rem;
+    line-height: 1;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+}
+.headline-secondary__after {
+    font-family: 'Beaufort-Bold', sans-serif;
+    font-size: calc(61.82px + 3.03vw);
+    letter-spacing: 0.03em;
+    line-height: 0.85;
+}
+
+@media (max-width: 575.98px) {
+    .headline-secondary__after {
+        font-size: calc(22.24px + 4.3vw);;
+    }
+}

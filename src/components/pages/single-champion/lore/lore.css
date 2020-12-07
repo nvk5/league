@@ -1,0 +1,9 @@
+.champion-lore__open {
+    cursor: pointer;
+    margin-left: 10px;
+    color: rgb(208, 168, 92);
+}
+
+.champion-lore__open.closed {
+    display: none;
+}

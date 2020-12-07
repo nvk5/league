@@ -1,0 +1,13 @@
+.champion-cards {
+    margin: calc(4.5% - 20px) calc(4% - 20px) 0px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.champion-cards__filter-fail {
+    margin: auto;
+    padding: 30px 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    text-align: center;
+}

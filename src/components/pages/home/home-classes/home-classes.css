@@ -1,0 +1,124 @@
+.home-classes__headline {
+    text-align: center;
+    padding: 70px 0;
+}
+
+.home-classes__btn {
+    display: flex;
+    justify-content: center;
+}
+
+.home-classes .track__btn {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+}
+
+.home-classes__track-video {
+    width: 450px;
+    height: 300px;
+    position: relative;
+    margin: 30px auto 0;
+}
+
+.home-classes__img {
+    padding-right: 15px;
+    width: 60%;
+    position: relative;
+}
+
+.home-classes__img .track-image {
+    transform: translateY(-77px);
+}
+
+.home-classes__block {
+    display: flex;
+    align-items: center;
+    position: relative; 
+}
+
+.home-classes__track {
+    width: 50%;
+}
+
+.home-classes__bg {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 35rem;
+    height: 35rem;
+    z-index: -1;
+}
+
+.home-classes__bg svg {
+    fill: rgb(247, 247, 247)
+}
+
+.home-classes__class {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 1s ease;
+    transition-delay: .5s;
+}
+
+.home-classes__class.show {
+    opacity: 1;
+}
+
+
+@media (max-width: 1280px) {
+    .home-classes__block {
+        flex-direction: column;
+        align-items:  stretch;
+        padding: 100px 7%;
+    }
+    .home-classes__track-video {
+        display: none;
+    }
+    .home-classes__img .track-image {
+        transform: none;
+    }
+    .home-classes__img {
+        align-self: center;
+        padding-right: 0;
+        width: 50%;
+        margin-top: 50px;
+    }
+
+    .home-classes__track {
+        width: 100%;
+    }
+    .home-classes .track__btn {
+        flex: 1
+    }
+}
+
+@media (max-width: 991.98px) {
+    .home-classes__bg {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .home-classes__btn {
+        display: grid;
+        grid-gap: 20px;
+    }
+    .home-classes .track-wrap {
+        flex-direction: column;
+    }
+    .home-classes__img {
+        width: 100%;
+    }
+
+    .home-classes .track__btn {
+        width: auto;
+        height: auto;
+        padding: 10px 0;
+    }
+}

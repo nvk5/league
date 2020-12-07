@@ -1,0 +1,15 @@
+.champion-difficulty {
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.champion-difficulty__title-wrap {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.champion-difficulty__title {
+    color: rgb(208, 168, 92);
+}
