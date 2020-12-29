@@ -8,7 +8,7 @@ export default class LeagueOfLegendsService {
     }
 
     getAllChampions = async () => {
-        const result = await this.getService('https://ddragon.leagueoflegends.com/cdn/10.18.1/data/en_US/champion.json');
+        const result = await this.getService('https://ddragon.leagueoflegends.com/cdn/10.25.1/data/en_US/champion.json');
 
         const modifiedResult = Object.values(result.data).map(({ id, name, key, tags, title, info }) => {
             return {
@@ -23,7 +23,7 @@ export default class LeagueOfLegendsService {
     }
 
     getChampionById = async id => {
-        const result = await this.getService(`https://ddragon.leagueoflegends.com/cdn/10.19.1/data/en_US/champion/${id}.json`);
+        const result = await this.getService(`https://ddragon.leagueoflegends.com/cdn/10.25.1/data/en_US/champion/${id}.json`);
 
         const modifiedResult = Object.values(result.data).map(item => {
             const { blurb, lore, id, name, key, tags, skins, spells, passive, info, title } = item;
@@ -79,7 +79,7 @@ export default class LeagueOfLegendsService {
                     id: id || name,
                     name,
                     description: transformSpellDescription(description),
-                    image: `https://ddragon.leagueoflegends.com/cdn/10.19.1/img/${abilityClass}/${full}`,
+                    image: `https://ddragon.leagueoflegends.com/cdn/10.25.1/img/${abilityClass}/${full}`,
                     activeKey: hotKeys[i],
                     video: transformSpellVideo(champKey, hotKeys[i])
                 }
