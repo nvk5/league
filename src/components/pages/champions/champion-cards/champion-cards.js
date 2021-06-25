@@ -44,8 +44,9 @@ export default class ChampionCards extends React.Component {
         }
 
         return champs.filter(item => {
-            const champFields = expandArray(Object.values(item)).map(item => item.toLowerCase());
-
+            const champFields = expandArray(Object.values(item)).map(item => {
+                return item ? item.toLowerCase() : item
+            });
             return checkArrayEntries(nonEmptyFilters, champFields);
 
         })
